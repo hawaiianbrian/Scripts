@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Basic run
+        run: |
+          python3 d20_decision.py --seed 123
+
+      - name: JSON output smoke
+        run: |
+          python3 d20_decision.py --json --seed 123 --senior -n 2
+
+      - name: Exit code gating (should pass with senior +3)
+        run: |
+          python3 d20_decision.py --senior --seed 999 --exit-code || exit 1
