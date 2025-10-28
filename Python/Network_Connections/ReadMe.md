@@ -14,4 +14,9 @@ Perfect for quick network visibility, troubleshooting, or threat hunting.
 
 ---
 
-## 🛠️
+## 🛠️ Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/SERNAME/net-connections-monitor.git
+cd net-connections-monitor
