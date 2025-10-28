@@ -18,5 +18,5 @@ Perfect for quick network visibility, troubleshooting, or threat hunting.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/SERNAME/net-connections-monitor.git
+git clone https://github.com/USERNAME/net-connections-monitor.git
 cd net-connections-monitor
